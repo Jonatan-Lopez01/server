@@ -26,7 +26,7 @@ class Server {
         this.app.use('/documentacion', swagger_ui_express_1.default.serve, swagger_ui_express_1.default.setup(swagger_json_1.default));
     }
     config() {
-        this.app.set('port', process.env.PORT || 3000); //aqui podemos modificar el puerto, el puerto nos lo dara el provedodr de hosting
+        this.app.set('port', process.env.PORT || 80); //aqui podemos modificar el puerto, el puerto nos lo dara el provedodr de hosting
         this.app.use((0, morgan_1.default)('dev'));
         this.app.use((0, cors_1.default)());
         this.app.use(express_1.default.json());
